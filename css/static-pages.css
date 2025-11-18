@@ -1,0 +1,116 @@
+/* ======================================= */
+/* Static Content Page Styling             */
+/* Used for: privacy.html, terms.html,     */
+/* disclaimer.html                         */
+/* ======================================= */
+
+/* 1. Page Section Container and Content Width */
+.section-container.static-page-content {
+    /* Padding to clear the fixed navbar and provide vertical spacing */
+    padding-top: 150px; 
+    padding-bottom: 80px; 
+    background-color: #f7f7f7; 
+}
+
+.static-page-content .container {
+    /* Overrides the main container's max-width for better readability (900px is ideal for long text) */
+    max-width: 900px; 
+}
+
+/* 2. Text Alignment: ALL TEXT LEFT-ALIGNED IN CENTERED BLOCK */
+.static-page-content h1, 
+.static-page-content h3, 
+.static-page-content p, 
+.static-page-content ul, 
+.static-page-content li {
+    text-align: left; /* Ensures all text is flush left */
+}
+
+/* 3. Main Title (H1) */
+.static-page-content .section-header h1 {
+    font-size: 2.8rem;
+    color: var(--color-primary, #0056b3); 
+    margin-bottom: 5px;
+}
+
+/* 4. Effective Date / Header Subtitle */
+.static-page-content .section-header p {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+/* 5. Section Headings (H3) */
+.static-page-content h3 {
+    font-size: 1.6rem;
+    color: var(--color-text-dark, #333); 
+    margin-top: 40px; 
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    /* Visual marker on the left */
+    border-left: 5px solid var(--color-secondary, #ffaa00); 
+    padding-left: 15px;
+    line-height: 1.2;
+}
+
+/* 6. General Text and Paragraphs */
+.static-page-content p {
+    font-size: 1.05rem;
+    line-height: 1.8; 
+    color: #444;
+    margin-bottom: 25px; 
+}
+
+/* 7. Lists (UL/OL) */
+.static-page-content ul,
+.static-page-content ol {
+    list-style: disc; /* Use disc for unordered lists, default for ordered lists */
+    padding-left: 40px;
+    margin-bottom: 25px;
+}
+
+.static-page-content ol {
+    list-style-type: decimal;
+}
+
+.static-page-content ul li,
+.static-page-content ol li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.static-page-content ul li strong,
+.static-page-content ol li strong {
+    color: #333;
+}
+
+/* 8. Links within Content */
+.static-page-content p a,
+.static-page-content li a {
+    color: var(--color-primary, #0056b3);
+    text-decoration: underline;
+}
+
+/* 9. Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .section-container.static-page-content {
+        padding-top: 120px;
+    }
+
+    .static-page-content .section-header h1 {
+        font-size: 2rem;
+    }
+    
+    .static-page-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .static-page-content ul,
+    .static-page-content ol {
+        padding-left: 20px;
+    }
+}
