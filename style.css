@@ -1,10 +1,10 @@
 /* --- VARIABLES & RESETS ------------------------------------------------ */
 :root {
-    --color-primary: #008080; 
-    --color-secondary: #00A3A3; 
+    --color-primary: #9E7C33; 
+    --color-secondary: #C29F54; 
     --color-text: #333333; 
     --color-light-bg: #F8F8F8; 
-    --color-light-accent: #e6f7f7; 
+    --color-light-accent: #F9F4E5; 
     --color-shadow: rgba(0, 0, 0, 0.1);
     --font-family: 'Georgia', serif; 
     --font-alt: 'Helvetica Neue', sans-serif;
@@ -192,7 +192,7 @@ h1, h2, h3, h4 {
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 10px;
     position: relative;
 }
 
@@ -443,6 +443,23 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 
+
+/* --- GALLERY NAVIGATION BAR STYLING (NEW SECTION) --- */
+.gallery-navigation {
+    /* Centers the buttons horizontally */
+    text-align: center;
+    /* Adds separation from the header and the grid */
+    margin-bottom: 30px; 
+    margin-top: -20px; /* Adjust spacing above the buttons */
+}
+
+.gallery-btn {
+    /* Uses your existing .btn-secondary styles */
+    /* Add margin to separate the buttons from each other */
+    margin: 0 10px; 
+    min-width: 220px; /* Gives the buttons a modern, substantial look */
+}
+
 /* ----------------------------------------------------------------------- */
 /* --- CONTACT FORMS (Separated Card Look) ------------------------------- */
 /* ----------------------------------------------------------------------- */
@@ -492,22 +509,22 @@ h1, h2, h3, h4 {
 .sticky-whatsapp {
     position: fixed;
     bottom: 20px;
-    left: 20px; 
+    right: 20px; 
     background-color: #25d366; 
     color: white;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
     text-align: center;
     border-radius: 50%;
-    font-size: 1.8em;
+    font-size: 2.2em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 900;
 }
 
 .scroll-up-btn {
     position: fixed;
-    bottom: 80px;
+    bottom: 100px;
     right: 20px;
     background-color: var(--color-primary); 
     color: white;
@@ -809,6 +826,22 @@ h1, h2, h3, h4 {
     .gallery-grid {
         grid-template-columns: 1fr;
     }
+
+    /* Inside @media (max-width: 600px) { ... } */
+
+/* NEW: Stacking the gallery navigation buttons on mobile */
+.gallery-navigation {
+    display: flex; /* Enables flex for vertical stacking */
+    flex-direction: column;
+    gap: 15px; /* Adds space between stacked buttons */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.gallery-btn {
+    width: 100%; /* Makes buttons full-width on mobile */
+    margin: 0;
+}
     .footer-grid {
         grid-template-columns: 1fr;
     }
