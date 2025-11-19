@@ -114,6 +114,7 @@ h1, h2, h3, h4 {
 .btn-primary:hover {
     background-color: var(--color-secondary);
     border-color: var(--color-secondary);
+    color: white;
 }
 
 .btn-secondary {
